@@ -1,0 +1,9 @@
+Options -Indexes +SymLinksIfOwnerMatch 
+
+RewriteEngine on
+RewriteBase /server/website/production/app/
+
+RewriteCond %{REQUEST_URI} !^/public/
+
+RewriteCond %{HTTP_HOST} ^(www\.)?loopshape\.org
+RewriteRule ^(.*)$ /public/$1 [L]
