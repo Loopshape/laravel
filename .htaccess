@@ -1,9 +1,9 @@
 Options -Indexes +SymLinksIfOwnerMatch 
 
 RewriteEngine on
-RewriteBase /server/website/production/app/
+RewriteBase /server/website/production/stack/
 
-RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_URI} !^/stack/public/
 
 RewriteCond %{HTTP_HOST} ^(www\.)?loopshape\.org
-RewriteRule ^(.*)$ /public/$1 [L]
+RewriteRule ^(.*)$ /stack/public/$1 [L]
